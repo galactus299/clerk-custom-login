@@ -2,6 +2,9 @@ import type {Metadata} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import {ClerkProvider} from "@clerk/nextjs";
+import Link from "next/link";
+import {URLS} from "@/lib/constants";
+import {Github} from "lucide-react";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -31,6 +34,9 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
             {children}
+            <Link className={'fixed bottom-1 right-1 rounded-full bg-black p-2'} href={URLS.github}>
+                <Github className={'text-white'}/>
+            </Link>
             </body>
             </html>
         </ClerkProvider>
