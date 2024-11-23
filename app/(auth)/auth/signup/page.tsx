@@ -1,11 +1,10 @@
-import { Metadata } from "next"
-import Image from "next/image"
+import {Metadata} from "next"
 import Link from "next/link"
 
-import { cn } from "@/lib/utils"
+import {cn} from "@/lib/utils"
 import {buttonVariants} from "@/components/ui/button";
-import {UserAuthForm} from "@/components/forms/user-auth-form";
 import {URLS} from "@/lib/constants";
+import {UserSignUpForm} from "@/components/forms/auth/user-sign-up-form";
 
 export const metadata: Metadata = {
     title: "Authentication",
@@ -34,7 +33,7 @@ export default function Page() {
                             Enter your email below to create your account
                         </p>
                     </div>
-                    <UserAuthForm/>
+                    <UserSignUpForm/>
                     <p className="px-8 text-center text-sm text-muted-foreground">
                         By clicking continue, you agree to our{" "}
                         <Link
