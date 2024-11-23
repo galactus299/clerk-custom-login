@@ -1,4 +1,5 @@
 export const URLS ={
     signup:'/auth/signup',
-    login:'/auth/login'
+    login:'/auth/login',
+    home:'/'
 }
